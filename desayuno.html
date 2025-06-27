@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bambú Beach Restaurante / Bambú Beach Restaurant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-b from-blue-100 via-sky-50 to-blue-200 min-h-screen flex flex-col">
+    <!-- Header with Logo -->
+    <header class="w-full flex items-center justify-between p-4 bg-white shadow-md rounded-b-2xl">
+      <div class="flex items-center gap-4">
+        <img src="img/Bambu.png" alt="Hotel Logo"
+             class="h-14 w-14 rounded-xl object-cover shadow border border-slate-200 bg-white"/>
+        <div>
+          <h1 class="text-2xl font-extrabold text-blue-900">Bambú Beach Restaurante</h1>
+          <h2 class="text-md text-slate-500 font-semibold">Bambú Beach Restaurant</h2>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top hotel images -->
+    <div class="flex gap-4 mt-6 justify-center w-full">
+      <img src="img/foto4.jpg" alt="Imagen del Hotel / Hotel Image"
+           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
+      <img src="img/foto3.jpg" alt="Imagen del Hotel / Hotel Image"
+           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
+    </div>
+
+    <!-- Menu Section -->
+    <main class="flex-1 flex flex-col items-center px-4 mt-4 w-full">
+      <div class="mb-6 text-center w-full">
+        <h3 class="text-2xl font-bold text-blue-800 drop-shadow">Nuestros Platos /
+          <span class="text-indigo-700">Our Dishes</span>
+        </h3>
+        <p class="text-gray-600 text-base">Disfruta una selección especial
+          <br/>
+          <span class="text-sm text-gray-400">Enjoy a special selection</span>
+        </p>
+      </div>
+
+      <!-- MENU LIST -->
+      <div id="menu-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full max-w-4xl">
+        <!-- PLATO 1 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
+          <img src="img/dominicano.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
+               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
+          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
+            Dominicano
+            <br/>
+            <span class="text-sm text-indigo-700 font-normal">Dominican</span>
+          </h4>
+          <p class="text-gray-700 mb-3 text-sm text-center">
+            Mangú tradicional servido con huevo, salami y queso.
+            <br/>
+            <span class="text-gray-400">
+              Traditional mangú served with egg, salami, and cheese.
+            </span>
+          </p>
+          <div class="flex flex-col items-center w-full mt-2">
+            <span class="text-blue-900 font-bold text-xl">
+              $7 USD / $400 DOP
+            </span>
+          </div>
+        </div>
+
+        <!-- PLATO 2 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
+          <img src="img/americano.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
+               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
+          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
+            Americano
+            <br/>
+            <span class="text-sm text-indigo-700 font-normal">American</span>
+          </h4>
+          <p class="text-gray-700 mb-3 text-sm text-center">
+            Pan tostado, huevos, tocino crujiente y mantequilla.
+            <br/>
+            <span class="text-gray-400">
+              Toasted bread, eggs, crispy bacon, and butter.
+            </span>
+          </p>
+          <div class="flex flex-col items-center w-full mt-2">
+            <span class="text-blue-900 font-bold text-xl">
+              $7 USD / $400 DOP
+            </span>
+          </div>
+        </div>
+
+        <!-- PLATO 3 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
+          <img src="img/panqueques.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
+               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
+          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
+            Panqueques con Miel o Sirop
+            <br/>
+            <span class="text-sm text-indigo-700 font-normal">Pancakes with Honey or Syrup</span>
+          </h4>
+          <p class="text-gray-700 mb-3 text-sm text-center">
+            Panqueques esponjosos servidos con mantequilla y tu elección de miel o sirope.
+            <br/>
+            <span class="text-gray-400">
+              Fluffy pancakes served with butter and your choice of honey or syrup.
+            </span>
+          </p>
+          <div class="flex flex-col items-center w-full mt-2">
+            <span class="text-blue-900 font-bold text-xl">
+              $6 USD / $350 DOP
+            </span>
+          </div>
+        </div>
+
+        <!-- PLATO 4 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
+          <img src="img/yogur.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
+               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
+          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
+            Frutas Tropicales
+            <br/>
+            <span class="text-sm text-indigo-700 font-normal">Tropical Fruits</span>
+          </h4>
+          <p class="text-gray-700 mb-3 text-sm text-center">
+            Selección de frutas tropicales frescas, acompañadas de yogur cremoso y granola crujiente.
+            <br/>
+            <span class="text-gray-400">
+              A selection of fresh tropical fruits, served with creamy yogurt and crunchy granola.
+            </span>
+          </p>
+          <div class="flex flex-col items-center w-full mt-2">
+            <span class="text-blue-900 font-bold text-xl">
+              $6 USD / $350 DOP
+            </span>
+          </div>
+        </div>
+
+        <!-- PLATO 5 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
+          <img src="img/elbambu.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
+               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
+          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
+            Bambú
+            <br/>
+            <span class="text-sm text-indigo-700 font-normal">Bambú</span>
+          </h4>
+          <p class="text-gray-700 mb-3 text-sm text-center">
+            Pan tostado, huevos, tocino, salchichas y mantequilla.
+            <br/>
+            <span class="text-gray-400">
+              Toasted bread, eggs, bacon, sausages, and butter.
+            </span>
+          </p>
+          <div class="flex flex-col items-center w-full mt-2">
+            <span class="text-blue-900 font-bold text-xl">
+              $7 USD / $400 DOP
+            </span>
+          </div>
+        </div>
+
+        <!-- PLATO 6 -->
+        <div
+          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
+          <img src="img/clasico.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
+               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
+          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
+            Clásico
+            <br/>
+            <span class="text-sm text-indigo-700 font-normal">Classic</span>
+          </h4>
+          <p class="text-gray-700 mb-3 text-sm text-center">
+            Omelet relleno de jamón, queso y vegetales frescos.
+            <br/>
+            <span class="text-gray-400">
+              Omelet filled with ham, cheese, and fresh vegetables.
+            </span>
+          </p>
+          <div class="flex flex-col items-center w-full mt-2">
+            <span class="text-blue-900 font-bold text-xl">
+              $7 USD / $400 DOP
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AVISO IMPORTANTE DE IMPUESTOS Y PROPINA -->
+      <div class="w-full flex justify-center mt-8">
+        <div class="bg-red-100 border border-red-400 rounded-2xl px-6 py-4 max-w-lg text-center shadow-lg">
+          <span class="text-red-700 font-bold uppercase text-base">
+            Los precios mostrados <u>NO incluyen</u> el 10% de propina legal ni el 18% de ITBIS.
+          </span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Bottom hotel images -->
+    <div class="flex gap-4 mt-10 justify-center w-full">
+      <img src="img/foto1.jpg" alt="Imagen del Hotel / Hotel Image"
+           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
+      <img src="img/foto2.jpg" alt="Imagen del Hotel / Hotel Image"
+           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-8 p-4 bg-white/80 text-center text-base text-gray-500 rounded-t-2xl shadow-inner">
+      © 2025 Bambú Beach Restaurante · Todos los derechos reservados / All rights reserved
+    </footer>
+  </body>
+</html>

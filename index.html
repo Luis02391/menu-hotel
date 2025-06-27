@@ -3,211 +3,172 @@
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Bambú Beach Restaurante / Bambú Beach Restaurant</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Bambú Beach Restaurante · Menú</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-gradient-to-b from-blue-100 via-sky-50 to-blue-200 min-h-screen flex flex-col">
-    <!-- Header with Logo -->
-    <header class="w-full flex items-center justify-between p-4 bg-white shadow-md rounded-b-2xl">
-      <div class="flex items-center gap-4">
-        <img src="img/Bambu.png" alt="Hotel Logo"
-             class="h-14 w-14 rounded-xl object-cover shadow border border-slate-200 bg-white"/>
-        <div>
-          <h1 class="text-2xl font-extrabold text-blue-900">Bambú Beach Restaurante</h1>
-          <h2 class="text-md text-slate-500 font-semibold">Bambú Beach Restaurant</h2>
-        </div>
-      </div>
-    </header>
+  <body class="bg-gradient-to-b from-blue-100 via-sky-50 to-blue-200 min-h-screen flex flex-col items-center">
+    <!-- NAV -->
+    <nav class="w-full max-w-3xl mx-auto mt-6 mb-2">
+      <ul class="flex flex-wrap justify-center gap-4">
+        <li><a href="#starters" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Entradas / Starters</a></li>
+        <li><a href="#seafood" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Mariscos / Seafood</a></li>
+        <li><a href="#meat" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Carnes / Meats</a></li>
+        <li><a href="#pasta" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Pastas / Pasta</a></li>
+      </ul>
+    </nav>
 
-    <!-- Top hotel images -->
-    <div class="flex gap-4 mt-6 justify-center w-full">
-      <img src="img/foto4.jpg" alt="Imagen del Hotel / Hotel Image"
-           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
-      <img src="img/foto3.jpg" alt="Imagen del Hotel / Hotel Image"
-           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
-    </div>
+    <main class="max-w-3xl w-full mx-auto mb-8">
+      <div class="bg-white/95 rounded-3xl shadow-2xl p-8">
 
-    <!-- Menu Section -->
-    <main class="flex-1 flex flex-col items-center px-4 mt-4 w-full">
-      <div class="mb-6 text-center w-full">
-        <h3 class="text-2xl font-bold text-blue-800 drop-shadow">Nuestros Platos /
-          <span class="text-indigo-700">Our Dishes</span>
-        </h3>
-        <p class="text-gray-600 text-base">Disfruta una selección especial
-          <br/>
-          <span class="text-sm text-gray-400">Enjoy a special selection</span>
-        </p>
-      </div>
+        <!-- TITULO -->
+        <h1 class="text-4xl font-extrabold text-center text-blue-800 mb-1 tracking-widest drop-shadow-lg">Bambú Beach Restaurante</h1>
+        <h2 class="text-lg text-center text-slate-600 font-semibold mb-8 tracking-wide">Menú · Menu</h2>
 
-      <!-- MENU LIST -->
-      <div id="menu-list" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full max-w-4xl">
-        <!-- PLATO 1 -->
-        <div
-          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
-          <img src="img/dominicano.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
-               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
-          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
-            Dominicano
-            <br/>
-            <span class="text-sm text-indigo-700 font-normal">Dominican</span>
-          </h4>
-          <p class="text-gray-700 mb-3 text-sm text-center">
-            Mangú tradicional servido con huevo, salami y queso.
-            <br/>
-            <span class="text-gray-400">
-              Traditional mangú served with egg, salami, and cheese.
-            </span>
-          </p>
-          <div class="flex flex-col items-center w-full mt-2">
-            <span class="text-blue-900 font-bold text-xl">
-              $7 USD / $400 DOP
-            </span>
+        <!-- ENTRADAS / STARTERS -->
+        <section id="starters" class="mb-8 scroll-mt-24">
+          <h3 class="text-2xl text-blue-700 font-bold border-b-2 border-blue-100 pb-1 mb-2 tracking-wide">
+            Entradas <span class="text-base text-slate-400 font-normal">/ Starters</span>
+          </h3>
+          <ul class="divide-y divide-blue-50">
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Calamar frito <span class="text-slate-400">/ Fried calamari</span></span>
+              <span class="font-bold text-blue-900">$450 DOP <span class="text-teal-600 text-sm font-normal">($7.50 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Ensalada capresa <span class="text-slate-400">/ Caprese salad</span></span>
+              <span class="font-bold text-blue-900">$550 DOP <span class="text-teal-600 text-sm font-normal">($9.20 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Ceviche de dorado <span class="text-slate-400">/ Mahi-mahi ceviche</span></span>
+              <span class="font-bold text-blue-900">$650 DOP <span class="text-teal-600 text-sm font-normal">($10.80 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Aros de cebolla frito en salsa bambú <span class="text-slate-400">/ Onion rings with bambú sauce</span></span>
+              <span class="font-bold text-blue-900">$350 DOP <span class="text-teal-600 text-sm font-normal">($5.80 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Ensalada César pollo <span class="text-slate-400">/ Caesar salad with chicken</span></span>
+              <span class="font-bold text-blue-900">$550 DOP <span class="text-teal-600 text-sm font-normal">($9.20 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Ensalada César camarón <span class="text-slate-400">/ Caesar salad with shrimp</span></span>
+              <span class="font-bold text-blue-900">$600 DOP <span class="text-teal-600 text-sm font-normal">($10.00 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Crema de auyama <span class="text-slate-400">/ Pumpkin cream soup</span></span>
+              <span class="font-bold text-blue-900">$400 DOP <span class="text-teal-600 text-sm font-normal">($6.70 USD)</span></span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- MARISCOS / SEAFOOD -->
+        <section id="seafood" class="mb-8 scroll-mt-24">
+          <h3 class="text-2xl text-blue-700 font-bold border-b-2 border-blue-100 pb-1 mb-2 tracking-wide">
+            Mariscos <span class="text-base text-slate-400 font-normal">/ Seafood</span>
+          </h3>
+          <ul class="divide-y divide-blue-50">
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Chillo (por libra) <span class="text-slate-400">/ Red snapper (per pound)</span></span>
+              <span class="font-bold text-blue-900">$1300 DOP <span class="text-teal-600 text-sm font-normal">($21.70 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Dorado <span class="text-slate-400">/ Mahi-mahi</span></span>
+              <span class="font-bold text-blue-900">$850 DOP <span class="text-teal-600 text-sm font-normal">($14.20 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Camarones <span class="text-slate-400">/ Shrimp</span></span>
+              <span class="font-bold text-blue-900">$800 DOP <span class="text-teal-600 text-sm font-normal">($13.30 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Lambí <span class="text-slate-400">/ Conch</span></span>
+              <span class="font-bold text-blue-900">$700 DOP <span class="text-teal-600 text-sm font-normal">($11.70 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Calamar al gusto <span class="text-slate-400">/ Calamari (your style)</span></span>
+              <span class="font-bold text-blue-900">$600 DOP <span class="text-teal-600 text-sm font-normal">($10.00 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Parrilla de marisco <span class="text-slate-400">/ Mixed seafood grill</span></span>
+              <span class="font-bold text-blue-900">$850 DOP <span class="text-teal-600 text-sm font-normal">($14.20 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Cazuela de marisco <span class="text-slate-400">/ Seafood casserole</span></span>
+              <span class="font-bold text-blue-900">$850 DOP <span class="text-teal-600 text-sm font-normal">($14.20 USD)</span></span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- CARNES / MEATS -->
+        <section id="meat" class="mb-8 scroll-mt-24">
+          <h3 class="text-2xl text-blue-700 font-bold border-b-2 border-blue-100 pb-1 mb-2 tracking-wide">
+            Carnes <span class="text-base text-slate-400 font-normal">/ Meats</span>
+          </h3>
+          <ul class="divide-y divide-blue-50">
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Churrasco <span class="text-slate-400">/ Skirt steak</span></span>
+              <span class="font-bold text-blue-900">$1700 DOP <span class="text-teal-600 text-sm font-normal">($28.30 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Pechuga <span class="text-slate-400">/ Chicken breast</span></span>
+              <span class="font-bold text-blue-900">$600 DOP <span class="text-teal-600 text-sm font-normal">($10.00 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Costilla de cerdo <span class="text-slate-400">/ Pork ribs</span></span>
+              <span class="font-bold text-blue-900">$750 DOP <span class="text-teal-600 text-sm font-normal">($12.50 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Alitas BBQ <span class="text-slate-400">/ BBQ wings</span></span>
+              <span class="font-bold text-blue-900">$350 DOP <span class="text-teal-600 text-sm font-normal">($5.80 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Filete de res <span class="text-slate-400">/ Beef fillet</span></span>
+              <span class="font-bold text-blue-900">$1200 DOP <span class="text-teal-600 text-sm font-normal">($20.00 USD)</span></span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- PASTAS / PASTA -->
+        <section id="pasta" class="mb-8 scroll-mt-24">
+          <h3 class="text-2xl text-blue-700 font-bold border-b-2 border-blue-100 pb-1 mb-2 tracking-wide">
+            Pastas <span class="text-base text-slate-400 font-normal">/ Pasta</span>
+          </h3>
+          <ul class="divide-y divide-blue-50">
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Boloñesa <span class="text-slate-400">/ Bolognese</span></span>
+              <span class="font-bold text-blue-900">$700 DOP <span class="text-teal-600 text-sm font-normal">($11.70 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Carbonara <span class="text-slate-400">/ Carbonara</span></span>
+              <span class="font-bold text-blue-900">$650 DOP <span class="text-teal-600 text-sm font-normal">($10.80 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Camarón <span class="text-slate-400">/ Shrimp</span></span>
+              <span class="font-bold text-blue-900">$850 DOP <span class="text-teal-600 text-sm font-normal">($14.20 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Alfredo <span class="text-slate-400">/ Alfredo</span></span>
+              <span class="font-bold text-blue-900">$600 DOP <span class="text-teal-600 text-sm font-normal">($10.00 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Marisco <span class="text-slate-400">/ Seafood</span></span>
+              <span class="font-bold text-blue-900">$850 DOP <span class="text-teal-600 text-sm font-normal">($14.20 USD)</span></span>
+            </li>
+            <li class="flex justify-between py-2 flex-wrap">
+              <span>Pesto al pollo <span class="text-slate-400">/ Pesto chicken</span></span>
+              <span class="font-bold text-blue-900">$600 DOP <span class="text-teal-600 text-sm font-normal">($10.00 USD)</span></span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- AVISO -->
+        <div class="mt-8 text-center">
+          <div class="bg-red-100 border border-red-400 text-red-700 rounded-xl px-4 py-3 font-semibold text-base shadow">
+            <span class="uppercase">Nota:</span> Los precios no incluyen <b>10% servicio</b> ni <b>18% ITBIS</b>.
+            <br>
+            <span class="text-sm text-red-400 font-normal">Prices do not include 10% service fee or 18% VAT (ITBIS).</span>
           </div>
-        </div>
-
-        <!-- PLATO 2 -->
-        <div
-          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
-          <img src="img/americano.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
-               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
-          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
-            Americano
-            <br/>
-            <span class="text-sm text-indigo-700 font-normal">American</span>
-          </h4>
-          <p class="text-gray-700 mb-3 text-sm text-center">
-            Pan tostado, huevos, tocino crujiente y mantequilla.
-            <br/>
-            <span class="text-gray-400">
-              Toasted bread, eggs, crispy bacon, and butter.
-            </span>
-          </p>
-          <div class="flex flex-col items-center w-full mt-2">
-            <span class="text-blue-900 font-bold text-xl">
-              $7 USD / $400 DOP
-            </span>
-          </div>
-        </div>
-
-        <!-- PLATO 3 -->
-        <div
-          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
-          <img src="img/panqueques.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
-               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
-          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
-            Panqueques con Miel o Sirop
-            <br/>
-            <span class="text-sm text-indigo-700 font-normal">Pancakes with Honey or Syrup</span>
-          </h4>
-          <p class="text-gray-700 mb-3 text-sm text-center">
-            Panqueques esponjosos servidos con mantequilla y tu elección de miel o sirope.
-            <br/>
-            <span class="text-gray-400">
-              Fluffy pancakes served with butter and your choice of honey or syrup.
-            </span>
-          </p>
-          <div class="flex flex-col items-center w-full mt-2">
-            <span class="text-blue-900 font-bold text-xl">
-              $6 USD / $350 DOP
-            </span>
-          </div>
-        </div>
-
-        <!-- PLATO 4 -->
-        <div
-          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
-          <img src="img/yogur.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
-               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
-          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
-            Frutas Tropicales
-            <br/>
-            <span class="text-sm text-indigo-700 font-normal">Tropical Fruits</span>
-          </h4>
-          <p class="text-gray-700 mb-3 text-sm text-center">
-            Selección de frutas tropicales frescas, acompañadas de yogur cremoso y granola crujiente.
-            <br/>
-            <span class="text-gray-400">
-              A selection of fresh tropical fruits, served with creamy yogurt and crunchy granola.
-            </span>
-          </p>
-          <div class="flex flex-col items-center w-full mt-2">
-            <span class="text-blue-900 font-bold text-xl">
-              $6 USD / $350 DOP
-            </span>
-          </div>
-        </div>
-
-        <!-- PLATO 5 -->
-        <div
-          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
-          <img src="img/elbambu.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
-               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
-          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
-            Bambú
-            <br/>
-            <span class="text-sm text-indigo-700 font-normal">Bambú</span>
-          </h4>
-          <p class="text-gray-700 mb-3 text-sm text-center">
-            Pan tostado, huevos, tocino, salchichas y mantequilla.
-            <br/>
-            <span class="text-gray-400">
-              Toasted bread, eggs, bacon, sausages, and butter.
-            </span>
-          </p>
-          <div class="flex flex-col items-center w-full mt-2">
-            <span class="text-blue-900 font-bold text-xl">
-              $7 USD / $400 DOP
-            </span>
-          </div>
-        </div>
-
-        <!-- PLATO 6 -->
-        <div
-          class="bg-white/90 rounded-2xl shadow-xl p-6 flex flex-col items-center hover:scale-105 hover:bg-blue-100 transition cursor-pointer w-full max-w-xs mx-auto">
-          <img src="img/clasico.jpg" alt="Pasta de Berenjena / Eggplant Pasta"
-               class="h-32 w-32 object-cover rounded-xl shadow mb-3 border-4 border-white"/>
-          <h4 class="text-lg font-bold text-blue-800 mb-1 text-center">
-            Clásico
-            <br/>
-            <span class="text-sm text-indigo-700 font-normal">Classic</span>
-          </h4>
-          <p class="text-gray-700 mb-3 text-sm text-center">
-            Omelet relleno de jamón, queso y vegetales frescos.
-            <br/>
-            <span class="text-gray-400">
-              Omelet filled with ham, cheese, and fresh vegetables.
-            </span>
-          </p>
-          <div class="flex flex-col items-center w-full mt-2">
-            <span class="text-blue-900 font-bold text-xl">
-              $7 USD / $400 DOP
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- AVISO IMPORTANTE DE IMPUESTOS Y PROPINA -->
-      <div class="w-full flex justify-center mt-8">
-        <div class="bg-red-100 border border-red-400 rounded-2xl px-6 py-4 max-w-lg text-center shadow-lg">
-          <span class="text-red-700 font-bold uppercase text-base">
-            Los precios mostrados <u>NO incluyen</u> el 10% de propina legal ni el 18% de ITBIS.
-          </span>
         </div>
       </div>
     </main>
-
-    <!-- Bottom hotel images -->
-    <div class="flex gap-4 mt-10 justify-center w-full">
-      <img src="img/foto1.jpg" alt="Imagen del Hotel / Hotel Image"
-           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
-      <img src="img/foto2.jpg" alt="Imagen del Hotel / Hotel Image"
-           class="rounded-2xl shadow-lg object-cover h-28 w-36 bg-slate-200"/>
-    </div>
-
-    <!-- Footer -->
-    <footer class="mt-8 p-4 bg-white/80 text-center text-base text-gray-500 rounded-t-2xl shadow-inner">
-      © 2025 Bambú Beach Restaurante · Todos los derechos reservados / All rights reserved
-    </footer>
   </body>
 </html>
