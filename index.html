@@ -2,256 +2,312 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Bambú Beach Restaurante · Menú</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bambú Beach Menú</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bambu-brown': '#ad9472',
+              'bambu-dark': '#70553a',
+              'bambu-beige': '#f8f3ee',
+              'bambu-sand': '#f4e8d0',
+              'bambu-rose': '#eadfd7',
+              'bambu-sea': '#b5d6d3',
+              'bambu-yellow': '#f7ce87',
+              'bambu-cream': '#f8f5f1',
+              'bambu-taupe': '#c2b29c',
+              'bambu-lightbrown': '#e5d6c4'
+            },
+            animation: {
+              fadeInSlow: 'fadeInSlow 2.6s cubic-bezier(0.2,0,0.2,1) forwards',
+              floatSlow: 'floatSlow 8s ease-in-out infinite',
+              wiggleSlow: 'wiggleSlow 3s ease-in-out infinite',
+              scaleUp: 'scaleUp 0.5s ease forwards'
+            },
+            keyframes: {
+              fadeInSlow: {
+                '0%': {opacity: 0, transform: 'translateY(30px)'},
+                '100%': {opacity: 1, transform: 'translateY(0)'}
+              },
+              floatSlow: {
+                '0%, 100%': {transform: 'translateY(0)'},
+                '50%': {transform: 'translateY(-12px)'}
+              },
+              wiggleSlow: {
+                '0%, 100%': {transform: 'rotate(-2deg)'},
+                '50%': {transform: 'rotate(2deg)'}
+              },
+              scaleUp: {
+                '0%': {transform: 'scale(0.95)', opacity: 0},
+                '100%': {transform: 'scale(1)', opacity: 1}
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .nav-blur {
+        background: rgba(253, 244, 236, 0.95);
+        backdrop-filter: blur(8px);
+      }
+
+      .title-shadow {
+        text-shadow: 0 2px 10px rgba(100, 60, 0, 0.18), 0 2px 20px #fff6;
+      }
+    </style>
   </head>
-  <body class="bg-gradient-to-b from-blue-100 via-sky-50 to-blue-200 min-h-screen flex flex-col items-center">
+  <body class="bg-gradient-to-tr from-bambu-cream via-bambu-sand to-bambu-beige text-bambu-dark font-sans">
+
     <!-- NAV -->
-    <nav class="w-full max-w-3xl mx-auto sticky top-0 z-10 bg-gradient-to-b from-blue-100 via-sky-50 to-blue-200 py-2">
-      <ul class="flex flex-wrap justify-center gap-3">
-        <li><a href="#starters" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Entradas / Starters</a></li>
-        <li><a href="#seafood" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Mariscos / Seafood</a></li>
-        <li><a href="#meat" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Carnes / Meats</a></li>
-        <li><a href="#pasta" class="px-3 py-1 rounded-full bg-blue-700 text-white font-semibold shadow hover:bg-teal-700 transition">Pastas / Pasta</a></li>
-      </ul>
+    <nav
+      class="fixed top-4 left-0 right-0 z-50 flex justify-center gap-3 px-2 py-2 nav-blur rounded-full shadow-md max-w-xl mx-auto border border-bambu-brown/40">
+      <a href="#entradas"
+         class="px-3 py-1 rounded-full bg-bambu-brown text-white font-semibold shadow hover:bg-bambu-dark transition">
+        Entradas
+      </a>
+      <a href="#mariscos"
+         class="px-3 py-1 rounded-full bg-bambu-sea text-bambu-dark font-semibold shadow hover:bg-bambu-brown hover:text-white transition">
+        Mariscos
+      </a>
+      <a href="#carnes"
+         class="px-3 py-1 rounded-full bg-bambu-yellow text-bambu-dark font-semibold shadow hover:bg-bambu-brown hover:text-white transition">
+        Carnes
+      </a>
+      <a href="#pastas"
+         class="px-3 py-1 rounded-full bg-bambu-rose text-bambu-dark font-semibold shadow hover:bg-bambu-brown hover:text-white transition">
+        Pastas
+      </a>
     </nav>
 
-    <main class="max-w-3xl w-full mx-auto mb-8">
-      <div class="bg-white/95 rounded-3xl shadow-2xl p-5 sm:p-8 mt-4">
+    <!-- HERO -->
+    <section class="relative h-[90vh] flex flex-col items-center justify-center text-center px-6">
+      <div
+        class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600891963937-29a2b8b9a4f1')] bg-cover bg-center brightness-50 rounded-b-[4rem]"></div>
+      <div class="relative z-10 max-w-3xl animate-fadeInSlow">
+        <h1 class="title-shadow text-6xl sm:text-8xl font-extrabold text-bambu-dark animate-floatSlow">Bambú Beach</h1>
+        <p class="mt-4 sm:text-3xl text-bambu-dark font-semibold animate-fadeInSlow title-shadow">Restaurante · Menú
+          Exclusivo
+        </p>
+        <a href="#menu"
+           class="mt-8 inline-block px-10 py-4 bg-bambu-brown rounded-full shadow-lg text-white font-bold hover:bg-bambu-dark transition scale-95 hover:scale-100 animate-scaleUp">
+          Ver Menú
+        </a>
+      </div>
+    </section>
 
-        <!-- TITULO -->
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-center text-blue-800 mb-2 tracking-widest drop-shadow-lg">
-          Bambú Beach Restaurante
-        </h1>
-        <h2 class="text-md sm:text-lg text-center text-slate-600 font-semibold mb-6 tracking-wide">Menú · Menu</h2>
+    <!-- MENÚ PRINCIPAL -->
+    <section id="menu"
+             class="relative z-10 max-w-5xl mx-auto bg-bambu-beige/95 rounded-t-[3rem] -mt-20 px-4 sm:px-8 py-10 sm:py-16 shadow-2xl border-t-4 border-bambu-brown">
 
-        <!-- ENTRADAS / STARTERS -->
-        <section id="starters" class="mb-10 scroll-mt-20">
-          <h3 class="text-2xl text-blue-700 font-bold border-b-4 border-blue-200 pb-2 mb-5 tracking-wide uppercase">
-            Entradas
-            <span class="text-base text-slate-400 font-normal normal-case">/ Starters</span>
-          </h3>
-          <div class="grid gap-5">
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-blue-200">
-              <div>
-                <span class="font-semibold">Calamar frito</span>
-                <span class="text-slate-400 text-sm">/ Fried calamari</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$450 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-blue-200">
-              <div>
-                <span class="font-semibold">Ensalada capresa</span>
-                <span class="text-slate-400 text-sm">/ Caprese salad</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$550 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-blue-200">
-              <div>
-                <span class="font-semibold">Ceviche de dorado</span>
-                <span class="text-slate-400 text-sm">/ Mahi-mahi ceviche</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$650 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-blue-200">
-              <div>
-                <span class="font-semibold">Aros de cebolla frito en salsa bambú</span>
-                <span class="text-slate-400 text-sm">/ Onion rings with bambú sauce</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$350 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-blue-200">
-              <div>
-                <span class="font-semibold">Ensalada César pollo</span>
-                <span class="text-slate-400 text-sm">/ Caesar salad with chicken</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$550 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-blue-200">
-              <div>
-                <span class="font-semibold">Ensalada César camarón</span>
-                <span class="text-slate-400 text-sm">/ Caesar salad with shrimp</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$600 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-blue-200">
-              <div>
-                <span class="font-semibold">Crema de auyama</span>
-                <span class="text-slate-400 text-sm">/ Pumpkin cream soup</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$400 DOP</div>
-            </div>
+      <!-- ENTRADAS -->
+      <section id="entradas"
+               class="scroll-mt-28 mb-16 rounded-3xl bg-gradient-to-br from-bambu-lightbrown via-bambu-sand to-bambu-brown/20 p-8 shadow-md border-l-4 border-bambu-brown/40">
+        <h3 class="title-shadow text-4xl text-bambu-brown font-extrabold mb-8 animate-wiggleSlow">Entradas
+          <span class="font-light text-bambu-dark/70">/ Starters</span>
+        </h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-brown rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Calamar frito</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Fried calamari</p>
+            <p class="text-bambu-brown font-extrabold text-xl">$450 DOP</p>
           </div>
-        </section>
-
-        <!-- MARISCOS / SEAFOOD -->
-        <section id="seafood" class="mb-10 scroll-mt-20">
-          <h3 class="text-2xl text-blue-700 font-bold border-b-4 border-blue-200 pb-2 mb-5 tracking-wide uppercase">
-            Mariscos
-            <span class="text-base text-slate-400 font-normal normal-case">/ Seafood</span>
-          </h3>
-          <div class="grid gap-5">
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-teal-200">
-              <div>
-                <span class="font-semibold">Chillo (por libra)</span>
-                <span class="text-slate-400 text-sm">/ Red snapper (per pound)</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$1300 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-teal-200">
-              <div>
-                <span class="font-semibold">Dorado</span>
-                <span class="text-slate-400 text-sm">/ Mahi-mahi</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$850 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-teal-200">
-              <div>
-                <span class="font-semibold">Camarones</span>
-                <span class="text-slate-400 text-sm">/ Shrimp</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$800 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-teal-200">
-              <div>
-                <span class="font-semibold">Lambí</span>
-                <span class="text-slate-400 text-sm">/ Conch</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$700 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-teal-200">
-              <div>
-                <span class="font-semibold">Calamar al gusto</span>
-                <span class="text-slate-400 text-sm">/ Calamari (your style)</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$600 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-teal-200">
-              <div>
-                <span class="font-semibold">Parrilla de marisco</span>
-                <span class="text-slate-400 text-sm">/ Mixed seafood grill</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$850 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-teal-200">
-              <div>
-                <span class="font-semibold">Cazuela de marisco</span>
-                <span class="text-slate-400 text-sm">/ Seafood casserole</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$1250 DOP</div>
-            </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-brown rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Ensalada capresa</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Caprese salad</p>
+            <p class="text-bambu-brown font-extrabold text-xl">$550 DOP</p>
           </div>
-        </section>
-
-        <!-- CARNES / MEATS -->
-        <section id="meat" class="mb-10 scroll-mt-20">
-          <h3 class="text-2xl text-blue-700 font-bold border-b-4 border-blue-200 pb-2 mb-5 tracking-wide uppercase">
-            Carnes
-            <span class="text-base text-slate-400 font-normal normal-case">/ Meats</span>
-          </h3>
-          <div class="grid gap-5">
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-yellow-200">
-              <div>
-                <span class="font-semibold">Churrasco</span>
-                <span class="text-slate-400 text-sm">/ Skirt steak</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$1700 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-yellow-200">
-              <div>
-                <span class="font-semibold">Pechuga</span>
-                <span class="text-slate-400 text-sm">/ Chicken breast</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$600 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-yellow-200">
-              <div>
-                <span class="font-semibold">Costilla de cerdo</span>
-                <span class="text-slate-400 text-sm">/ Pork ribs</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$750 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-yellow-200">
-              <div>
-                <span class="font-semibold">Alitas BBQ</span>
-                <span class="text-slate-400 text-sm">/ BBQ wings</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$550 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-yellow-200">
-              <div>
-                <span class="font-semibold">Filete de res</span>
-                <span class="text-slate-400 text-sm">/ Beef fillet</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$1200 DOP</div>
-            </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-brown rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Ceviche de dorado</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Mahi-mahi ceviche</p>
+            <p class="text-bambu-brown font-extrabold text-xl">$650 DOP</p>
           </div>
-        </section>
-
-        <!-- PASTAS / PASTA -->
-        <section id="pasta" class="mb-8 scroll-mt-20">
-          <h3 class="text-2xl text-blue-700 font-bold border-b-4 border-blue-200 pb-2 mb-5 tracking-wide uppercase">
-            Pastas
-            <span class="text-base text-slate-400 font-normal normal-case">/ Pasta</span>
-          </h3>
-          <div class="grid gap-5">
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-pink-200">
-              <div>
-                <span class="font-semibold">Boloñesa</span>
-                <span class="text-slate-400 text-sm">/ Bolognese</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$700 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-pink-200">
-              <div>
-                <span class="font-semibold">Carbonara</span>
-                <span class="text-slate-400 text-sm">/ Carbonara</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$650 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-pink-200">
-              <div>
-                <span class="font-semibold">Camarón</span>
-                <span class="text-slate-400 text-sm">/ Shrimp</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$850 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-pink-200">
-              <div>
-                <span class="font-semibold">Alfredo</span>
-                <span class="text-slate-400 text-sm">/ Alfredo</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$600 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-pink-200">
-              <div>
-                <span class="font-semibold">Marisco</span>
-                <span class="text-slate-400 text-sm">/ Seafood</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$850 DOP</div>
-            </div>
-            <div class="bg-white rounded-2xl shadow flex flex-col p-4 border-l-4 border-pink-200">
-              <div>
-                <span class="font-semibold">Pesto al pollo</span>
-                <span class="text-slate-400 text-sm">/ Pesto chicken</span>
-              </div>
-              <div class="mt-2 text-blue-900 font-extrabold text-lg">$600 DOP</div>
-            </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-brown rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Aros de cebolla frito en salsa bambú</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Onion rings with bambú sauce</p>
+            <p class="text-bambu-brown font-extrabold text-xl">$350 DOP</p>
           </div>
-        </section>
-
-        <!-- AVISO IMPORTANTE DE IMPUESTOS Y PROPINA -->
-        <div class="w-full flex justify-center mt-8">
-          <div class="bg-red-100 border border-red-400 rounded-2xl px-6 py-4 max-w-lg text-center shadow-lg">
-            <span class="text-red-700 font-bold uppercase text-base">
-              Los precios mostrados
-              <u>NO incluyen</u>
-              el 10% de propina legal ni el 18% de ITBIS.
-            </span>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-brown rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Ensalada César pollo</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Caesar salad with chicken</p>
+            <p class="text-bambu-brown font-extrabold text-xl">$550 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-brown rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Ensalada César camarón</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Caesar salad with shrimp</p>
+            <p class="text-bambu-brown font-extrabold text-xl">$600 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-brown rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Crema de auyama</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Pumpkin cream soup</p>
+            <p class="text-bambu-brown font-extrabold text-xl">$400 DOP</p>
           </div>
         </div>
+      </section>
+
+      <!-- MARISCOS -->
+      <section id="mariscos"
+               class="scroll-mt-28 mb-16 rounded-3xl bg-gradient-to-br from-bambu-sand via-bambu-sea to-bambu-cream p-8 shadow-md border-l-4 border-bambu-brown/40">
+        <h3 class="title-shadow text-4xl text-bambu-dark font-extrabold mb-8 animate-wiggleSlow">Mariscos
+          <span class="font-light text-bambu-dark/70">/ Seafood</span>
+        </h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-sea rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Chillo (por libra)</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Red snapper (per pound)</p>
+            <p class="text-bambu-sea font-extrabold text-xl">$1300 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-sea rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Dorado</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Mahi-mahi</p>
+            <p class="text-bambu-sea font-extrabold text-xl">$850 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-sea rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Camarones</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Shrimp</p>
+            <p class="text-bambu-sea font-extrabold text-xl">$800 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-sea rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Lambí</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Conch</p>
+            <p class="text-bambu-sea font-extrabold text-xl">$700 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-sea rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Calamar al gusto</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Calamari (your style)</p>
+            <p class="text-bambu-sea font-extrabold text-xl">$600 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-sea rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Parrilla de marisco</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Mixed seafood grill</p>
+            <p class="text-bambu-sea font-extrabold text-xl">$850 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-sea rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Cazuela de marisco</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Seafood casserole</p>
+            <p class="text-bambu-sea font-extrabold text-xl">$1250 DOP</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARNES -->
+      <section id="carnes"
+               class="scroll-mt-28 mb-16 rounded-3xl bg-gradient-to-br from-bambu-yellow via-bambu-lightbrown to-bambu-cream p-8 shadow-md border-l-4 border-bambu-brown/40">
+        <h3 class="title-shadow text-4xl text-bambu-dark font-extrabold mb-8 animate-wiggleSlow">Carnes
+          <span class="font-light text-bambu-dark/70">/ Meats</span>
+        </h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-yellow rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Churrasco</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Skirt steak</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$1700 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-yellow rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Pechuga</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Chicken breast</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$600 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-yellow rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Costilla de cerdo</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Pork ribs</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$750 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-yellow rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Alitas BBQ</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ BBQ wings</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$550 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-yellow rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Filete de res</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Beef fillet</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$1200 DOP</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASTAS -->
+      <section id="pastas"
+               class="scroll-mt-28 mb-6 rounded-3xl bg-gradient-to-br from-bambu-cream via-bambu-rose to-bambu-brown/20 p-8 shadow-md border-l-4 border-bambu-brown/40">
+        <h3 class="title-shadow text-4xl text-bambu-brown font-extrabold mb-8 animate-wiggleSlow">Pastas
+          <span class="font-light text-bambu-dark/70">/ Pasta</span>
+        </h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-rose rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Boloñesa</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Bolognese</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$700 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-rose rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Carbonara</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Carbonara</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$650 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-rose rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Camarón</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Shrimp</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$850 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-rose rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Alfredo</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Alfredo</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$600 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-rose rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Marisco</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Seafood</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$850 DOP</p>
+          </div>
+          <div
+            class="bg-bambu-cream border-t-4 border-bambu-rose rounded-2xl p-6 shadow animate-fadeInSlow hover:shadow-lg transition-shadow duration-500">
+            <h4 class="text-2xl font-bold text-bambu-dark mb-2">Pesto al pollo</h4>
+            <p class="text-bambu-dark/70 mb-4 italic">/ Pesto chicken</p>
+            <p class="text-bambu-yellow font-extrabold text-xl">$600 DOP</p>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="mt-10 text-center animate-fadeInSlow mb-8">
+        <p class="text-sm text-red-600 font-semibold">* Los precios no incluyen el 10% de propina ni el 18% de ITBIS.
+        </p>
       </div>
-    </main>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center text-sm py-6 text-bambu-dark animate-fadeInSlow">
+      &copy; 2025 Bambú Beach Restaurante. Todos los derechos reservados.
+    </footer>
+
   </body>
 </html>
